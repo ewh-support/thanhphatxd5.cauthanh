@@ -1,0 +1,912 @@
+<style scoped>/* ----------- Gallery style -------------*/
+    .wrap-safari {
+
+        height: auto !important;
+    }
+
+    .ngg-galleryoverview {
+        overflow: hidden;
+        margin-top: 10px;
+        width: 100%;
+        clear: both;
+        display: block !important;
+    }
+
+    .ngg-galleryoverview .desc {
+        /* required for description */
+        margin: 0px 10px 10px 0px;
+        padding: 5px;
+    }
+
+    .ngg-gallery-thumbnail-box {
+        float: left;
+        max-width: 100% !important;
+    }
+
+    .ngg-template-caption .ngg-gallery-thumbnail-box {
+        margin-right: 0px;
+    }
+
+    .ngg-gallery-thumbnail {
+        text-align: center;
+        max-width: 100% !important;
+        background-color: #FFFFFF;
+        border: 1px solid #A9A9A9;
+        margin-right: 5px;
+        margin: 5px;
+    }
+
+    .ngg-template-caption .ngg-gallery-thumbnail {
+        margin-right: 0px;
+    }
+
+    .ngg-gallery-thumbnail a {
+        display: block;
+        margin: 4px;
+        border: none;
+        box-shadow: none;
+    }
+
+    .ngg-gallery-thumbnail img {
+        display: block;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        max-width: 100% !important;
+        height: auto;
+    }
+
+    .ngg-gallery-thumbnail span {
+        /* Images description */
+        font-size: 90%;
+        padding-left: 5px;
+        display: block;
+    }
+
+    /* ----------- New Default Styling September 2018 -----------*/
+
+    .ngg-galleryoverview {
+        margin-top: 40px;
+        margin-bottom: 50px;
+        -webkit-transition: width 1s, height 1s, background-color 1s, -webkit-transform 1s;
+        transition: width 1s, height 1s, background-color 1s, transform 1s;
+        min-height: 100px;
+    }
+
+    .ngg-gallery-thumbnail-box.ngg-1-columns {
+        width: 100%;
+        float: left !important;
+    }
+
+    .ngg-gallery-thumbnail-box.ngg-2-columns {
+        width: 50%;
+        float: left !important;
+    }
+
+    .ngg-gallery-thumbnail-box.ngg-3-columns {
+        width: 33.33333%;
+        float: left !important;
+    }
+
+    .ngg-gallery-thumbnail-box.ngg-4-columns {
+        width: 25%;
+        float: left !important;
+    }
+
+    .ngg-gallery-thumbnail-box.ngg-5-columns {
+        width: 20%;
+        float: left !important;
+    }
+
+    .ngg-gallery-thumbnail-box.ngg-6-columns {
+        width: 16.6666%;
+        float: left !important;
+    }
+
+    .ngg-gallery-thumbnail-box.ngg-7-columns {
+        width: 14.2857%;
+        float: left !important;
+    }
+
+    .ngg-gallery-thumbnail-box.ngg-8-columns {
+        width: 12.5%;
+        float: left !important;
+    }
+
+    .ngg-gallery-thumbnail-box.ngg-9-columns {
+        width: 11.1111%;
+        float: left !important;
+    }
+
+    .ngg-gallery-thumbnail-box.ngg-10-columns {
+        width: 10%;
+        float: left !important;
+    }
+
+    .ngg-gallery-thumbnail-box.ngg-11-columns {
+        width: 9.09%;
+        float: left !important;
+    }
+
+    .ngg-gallery-thumbnail-box.ngg-12-columns {
+        width: 8.3333%;
+        float: left !important;
+    }
+
+    .ngg-gallery-thumbnail-box.ngg-13-columns {
+        width: 7.692%;
+        float: left !important;
+    }
+
+    .ngg-gallery-thumbnail-box.ngg-14-columns {
+        width: 7.142%;
+        float: left !important;
+    }
+
+    .ngg-gallery-thumbnail-box.ngg-15-columns {
+        width: 6.6666%;
+        float: left !important;
+    }
+
+    @media (max-width: 800px) {
+
+        .ngg-gallery-thumbnail-box.ngg-5-columns,
+        .ngg-gallery-thumbnail-box.ngg-6-columns,
+        .ngg-gallery-thumbnail-box.ngg-7-columns,
+        .ngg-gallery-thumbnail-box.ngg-8-columns,
+        .ngg-gallery-thumbnail-box.ngg-9-columns,
+        .ngg-gallery-thumbnail-box.ngg-10-columns,
+        .ngg-gallery-thumbnail-box.ngg-11-columns,
+        .ngg-gallery-thumbnail-box.ngg-12-columns,
+        .ngg-gallery-thumbnail-box.ngg-13-columns,
+        .ngg-gallery-thumbnail-box.ngg-14-columns,
+        .ngg-gallery-thumbnail-box.ngg-15-columns,
+        .ngg-gallery-thumbnail-box.ngg-16-columns,
+        .ngg-gallery-thumbnail-box.ngg-17-columns,
+        .ngg-gallery-thumbnail-box.ngg-18-columns,
+        .ngg-gallery-thumbnail-box.ngg-19-columns,
+        .ngg-gallery-thumbnail-box.ngg-29-columns {
+            width: 25%;
+        }
+    }
+
+    @media (max-width: 600px) {
+
+        .ngg-gallery-thumbnail-box.ngg-4-columns,
+        .ngg-gallery-thumbnail-box.ngg-5-columns,
+        .ngg-gallery-thumbnail-box.ngg-6-columns,
+        .ngg-gallery-thumbnail-box.ngg-7-columns,
+        .ngg-gallery-thumbnail-box.ngg-8-columns,
+        .ngg-gallery-thumbnail-box.ngg-9-columns,
+        .ngg-gallery-thumbnail-box.ngg-10-columns,
+        .ngg-gallery-thumbnail-box.ngg-11-columns,
+        .ngg-gallery-thumbnail-box.ngg-12-columns,
+        .ngg-gallery-thumbnail-box.ngg-13-columns,
+        .ngg-gallery-thumbnail-box.ngg-14-columns,
+        .ngg-gallery-thumbnail-box.ngg-15-columns,
+        .ngg-gallery-thumbnail-box.ngg-16-columns,
+        .ngg-gallery-thumbnail-box.ngg-17-columns,
+        .ngg-gallery-thumbnail-box.ngg-18-columns,
+        .ngg-gallery-thumbnail-box.ngg-19-columns,
+        .ngg-gallery-thumbnail-box.ngg-29-columns {
+            width: 33.33333%;
+        }
+    }
+
+    @media (max-width: 400px) {
+
+        .ngg-gallery-thumbnail-box.ngg-3-columns,
+        .ngg-gallery-thumbnail-box.ngg-4-columns,
+        .ngg-gallery-thumbnail-box.ngg-5-columns,
+        .ngg-gallery-thumbnail-box.ngg-6-columns,
+        .ngg-gallery-thumbnail-box.ngg-7-columns,
+        .ngg-gallery-thumbnail-box.ngg-8-columns,
+        .ngg-gallery-thumbnail-box.ngg-9-columns,
+        .ngg-gallery-thumbnail-box.ngg-10-columns,
+        .ngg-gallery-thumbnail-box.ngg-11-columns,
+        .ngg-gallery-thumbnail-box.ngg-12-columns,
+        .ngg-gallery-thumbnail-box.ngg-13-columns,
+        .ngg-gallery-thumbnail-box.ngg-14-columns,
+        .ngg-gallery-thumbnail-box.ngg-15-columns,
+        .ngg-gallery-thumbnail-box.ngg-16-columns,
+        .ngg-gallery-thumbnail-box.ngg-17-columns,
+        .ngg-gallery-thumbnail-box.ngg-18-columns,
+        .ngg-gallery-thumbnail-box.ngg-19-columns,
+        .ngg-gallery-thumbnail-box.ngg-29-columns {
+            width: 50%;
+        }
+    }
+
+    /* ----------- Styling for Basic Thumbnail Simple Template September 2018 -----------*/
+
+    .ngg-galleryoverview.default-view {
+        text-align: center;
+        font-size: 0 !important;
+        letter-spacing: 0 !important;
+    }
+
+    .ngg-galleryoverview.default-view .ngg-gallery-thumbnail-box {
+        display: inline-block;
+        float: none;
+        vertical-align: middle;
+    }
+
+    .ngg-galleryoverview.default-view .ngg-gallery-thumbnail {
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        margin-right: 0;
+        position: relative;
+    }
+
+    .ngg-galleryoverview.default-view .ngg-gallery-thumbnail a {
+        margin: 2px;
+        box-shadow: none;
+    }
+
+    .ngg-galleryoverview.default-view .ngg-gallery-thumbnail img:hover {
+        opacity: .8;
+    }
+
+    .ngg-galleryoverview.default-view .ngg-gallery-thumbnail img {
+        margin: 0 auto;
+        box-shadow: none;
+        cursor: pointer;
+    }
+
+    .ngg-galleryoverview.default-view .slideshowlink {
+        margin: 24px auto 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .ngg-galleryoverview.default-view .slideshowlink a {
+        font-size: 13px;
+        letter-spacing: .75px;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    .ngg-galleryoverview.default-view .slideshowlink a:hover {
+        text-decoration: none !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    /* ----------- Gallery list (Carousel template) -------------*/
+
+    .ngg-galleryoverview ul li:before {
+        content: '' !important;
+    }
+
+    .ngg-gallery-list {
+        list-style-type: none;
+        padding: 0px !important;
+        text-indent: 0px !important;
+    }
+
+    .ngg-galleryoverview div.pic img {
+        width: 100%;
+        border: 0px;
+        border-radius: 0px;
+    }
+
+    .ngg-gallery-list li {
+        float: left;
+        margin: 0 2px 0px 2px !important;
+        overflow: hidden;
+    }
+
+    .ngg-gallery-list li a {
+        border: 1px solid #CCCCCC;
+        display: block;
+        padding: 2px;
+    }
+
+    .ngg-gallery-list li.selected a {
+        -moz-background-inline-policy: continuous;
+        -moz-background-origin: padding;
+        background: #000000 none repeat scroll 0 0;
+    }
+
+    .ngg-gallery-list li img {
+        height: 40px;
+        width: 40px;
+    }
+
+    li.ngg-next,
+    li.ngg-prev {
+        height: 40px;
+        width: 40px;
+        font-size: 3.5em;
+    }
+
+    li.ngg-next a,
+    li.ngg-prev a {
+        padding-top: 10px;
+        border: none;
+        text-decoration: none;
+    }</style><!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><link rel="profile" href="https://gmpg.org/xfn/11"/><link rel="pingback" href="#"/><title>Công Ty Thiết Kế Xây Dựng Nhà Thanh Phát</title><link rel="dns-prefetch" href="https://fonts.googleapis.com/"/><link rel="dns-prefetch" href="https://s.w.org/"/><link rel="alternate" type="application/rss+xml" title=" Công Ty Thiết Kế Xây Dựng Nhà Thanh Phát" href="#"/><link rel="alternate" type="application/rss+xml" title=" Công Ty Thiết Kế Xây Dựng Nhà Thanh Phát" href="#"/><script type="text/javascript">window._wpemojiSettings = {
+            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/",
+            "ext": ".png",
+            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/",
+            "svgExt": ".svg",
+            "source": {
+                "concatemoji": "https:\/\/thietkenhadep.site\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.3"
+            }
+        };
+        ! function (a, b, c) {
+            function d(a, b) {
+                var c = String.fromCharCode;
+                l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, a), 0, 0);
+                var d = k.toDataURL();
+                l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, b), 0, 0);
+                var e = k.toDataURL();
+                return d === e
+            }
+
+            function e(a) {
+                var b;
+                if (!l || !l.fillText) return !1;
+                switch (l.textBaseline = "top", l.font = "600 32px Arial", a) {
+                    case "flag":
+                        return !(b = d([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819])) && (b = d([
+                            55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128,
+                            56423, 56128, 56447
+                        ], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203,
+                            56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447
+                        ]), !b);
+                    case "emoji":
+                        return b = d([55357, 56424, 55356, 57342, 8205, 55358, 56605, 8205, 55357, 56424, 55356, 57340],
+                            [55357, 56424, 55356, 57342, 8203, 55358, 56605, 8203, 55357, 56424, 55356, 57340]), !b
+                }
+                return !1
+            }
+
+            function f(a) {
+                var c = b.createElement("script");
+                c.src = a, c.defer = c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c)
+            }
+            var g, h, i, j, k = b.createElement("canvas"),
+                l = k.getContext && k.getContext("2d");
+            for (j = Array("flag", "emoji"), c.supports = {
+                    everything: !0,
+                    everythingExceptFlag: !0
+                }, i = 0; i < j.length; i++) c.supports[j[i]] = e(j[i]), c.supports.everything = c.supports
+                .everything && c.supports[j[i]], "flag" !== j[i] && (c.supports.everythingExceptFlag = c.supports
+                    .everythingExceptFlag && c.supports[j[i]]);
+            c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && !c.supports.flag, c.DOMReady = !1, c
+                .readyCallback = function () {
+                    c.DOMReady = !0
+                }, c.supports.everything || (h = function () {
+                    c.readyCallback()
+                }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", h, !1), a.addEventListener("load",
+                    h, !1)) : (a.attachEvent("onload", h), b.attachEvent("onreadystatechange", function () {
+                    "complete" === b.readyState && c.readyCallback()
+                })), g = c.source || {}, g.concatemoji ? f(g.concatemoji) : g.wpemoji && g.twemoji && (f(g.twemoji),
+                    f(g.wpemoji)))
+        }(window, document, window._wpemojiSettings);</script><style type="text/css">img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }</style><link rel="stylesheet" id="pt-cv-public-style-css" href="/wp-content/plugins/content-views-query-and-display-post-page/public/assets/css/cv.css" type="text/css" media="all"/><link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"/><link rel="stylesheet" id="related-posts-by-taxonomy-css" href="/wp-content/plugins/related-posts-by-taxonomy/includes/assets/css/styles.css" type="text/css" media="all"/><link rel="stylesheet" id="siteorigin-panels-front-css" href="/wp-content/plugins/siteorigin-panels/css/front-flex.min.css" type="text/css" media="all"/><link rel="stylesheet" id="sow-carousel-basic-css" href="/wp-content/plugins/so-widgets-bundle/widgets/post-carousel/css/style.css" type="text/css" media="all"/><link rel="stylesheet" id="sow-post-carousel-default-971e41e9e54d-css" href="/wp-content/uploads/siteorigin-widgets/sow-post-carousel-default-971e41e9e54d.css" type="text/css" media="all"/><link rel="stylesheet" id="shuttle-google-fonts-css" href="https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700&amp;subset=latin%2Clatin-ext" type="text/css" media="all"/><link rel="stylesheet" id="prettyPhoto-css" href="/wp-content/themes/shuttle/lib/extentions/prettyPhoto/css/prettyPhoto.css" type="text/css" media="all"/><link rel="stylesheet" id="shuttle-bootstrap-css" href="/wp-content/themes/shuttle/lib/extentions/bootstrap/css/bootstrap.min.css" type="text/css" media="all"/><link rel="stylesheet" id="dashicons-css" href="/wp-includes/css/dashicons.min.css" type="text/css" media="all"/><link rel="stylesheet" id="font-awesome-css" href="/wp-content/themes/shuttle/lib/extentions/font-awesome/css/font-awesome.min.css" type="text/css" media="all"/><link rel="stylesheet" id="shuttle-shortcodes-css" href="/wp-content/themes/shuttle/styles/style-shortcodes.css" type="text/css" media="all"/><link rel="stylesheet" id="shuttle-style-css" href="/wp-content/themes/shuttle/style.css" type="text/css" media="all"/><link rel="stylesheet" id="shuttle-responsive-css" href="/wp-content/themes/shuttle/styles/style-responsive.css" type="text/css" media="all"/><script type="text/javascript" src="/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="/wp-content/plugins/so-widgets-bundle/js/jquery.touchSwipe.min.js"></script><script type="text/javascript" src="/wp-content/themes/shuttle/lib/scripts/plugins/sticky/jquery.sticky.js"></script><link rel="https://api.w.org/" href="/wp-json/"/><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd"/><link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml"/><meta name="generator" content="WordPress 5.2.3"/><link rel="canonical" href="index.html"/><link rel="shortlink" href="index.html"/><link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthietkenhadep.site%2F"/><link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthietkenhadep.site%2F&#038;format=xml"/><style type="text/css" media="all" id="siteorigin-panels-layouts-head">/* Layout 51 */
+        #pgc-51-0-0 {
+            width: 100%;
+            width: calc(100% - (0 * 30px))
+        }
+
+        #pl-51 #panel-51-0-0-0 {
+            margin: 30px 0px 0px 0px
+        }
+
+        #pl-51 #panel-51-0-0-1,
+        #pl-51 #panel-51-0-0-2 {
+            margin: 20px 0px 0px 0px
+        }
+
+        #pl-51 #panel-51-0-0-3 {}
+
+        #pl-51 .so-panel {
+            margin-bottom: 30px
+        }
+
+        #pl-51 .so-panel:last-child {
+            margin-bottom: 0px
+        }
+
+        #pg-51-0.panel-no-style,
+        #pg-51-0.panel-has-style>.panel-row-style {
+            -webkit-align-items: flex-start;
+            align-items: flex-start
+        }
+
+        #panel-51-0-0-1>.panel-widget-style {
+            border: 1px solid #007a3d
+        }
+
+        #panel-51-0-0-2>.panel-widget-style {
+            color: #0080bf
+        }
+
+        @media (max-width:780px) {
+
+            #pg-51-0.panel-no-style,
+            #pg-51-0.panel-has-style>.panel-row-style {
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column
+            }
+
+            #pg-51-0>.panel-grid-cell,
+            #pg-51-0>.panel-row-style>.panel-grid-cell {
+                width: 100%;
+                margin-right: 0
+            }
+
+            #pl-51 .panel-grid-cell {
+                padding: 0
+            }
+
+            #pl-51 .panel-grid .panel-grid-cell-empty {
+                display: none
+            }
+
+            #pl-51 .panel-grid .panel-grid-cell-mobile-last {
+                margin-bottom: 0px
+            }
+        }</style><style type="text/css">#slider .rslides,
+        #slider .rslides li {
+            height: 500px;
+            max-height: 500px;
+        }
+
+        #slider .rslides img {
+            height: 100%;
+            max-height: 500px;
+        }</style><link rel="icon" href="/wp-content/uploads/2019/08/cropped-NHA-XANH-32x32.png" sizes="32x32"/><link rel="icon" href="/wp-content/uploads/2019/08/cropped-NHA-XANH-192x192.png" sizes="192x192"/><link rel="apple-touch-icon-precomposed" href="/wp-content/uploads/2019/08/cropped-NHA-XANH-180x180.png"/><meta name="msapplication-TileImage" content="/wp-content/uploads/2019/08/cropped-NHA-XANH-270x270.png"/><style type="text/css" id="wp-custom-css">#sub-footer-core .copyright {
+            display: none;
+        }
+
+        @media only screen and (max-width: 480px) {
+
+            .rpwd-recent-post-main.rpwd-design-1 .rpwd-recent-post__image a,
+            .rpwd-recent-post-main.rpwd-design-2 .rpwd-recent-post__image a {
+                width: 120px !important;
+                height: 120px !important;
+            }
+
+            .rpwd-recent-post__title {
+                font-size: 16px !important;
+            }
+
+            .rpwd-recent-post-main P {
+                DISPLAY: NONE !IMPORTANT;
+            }
+        }
+
+        .rpwd-recent-post-main.rpwd-design-1 .rpwd-recent-post__image a,
+        .rpwd-recent-post-main.rpwd-design-3 .rpwd-recent-post__image a {
+            width: 200px;
+            height: 200px;
+        }
+
+        .rpwd-recent-post-main.rpwd-design-3 .rpwd-recent-post {
+            background: #f4f4f4;
+        }
+
+        .rpwd-recent-post-main .rpwd-recent-post__text {
+            padding-top: 10px !important;
+            padding-right: 10px;
+        }
+
+        .rpwd-recent-post-main .rpwd-recent-post {
+            background: #fff;
+            margin: 10px 0 0 0;
+            border: 1px solid #efefef;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            line-height: 1.5;
+        }
+
+        a img {
+            border: 0px solid #f4f4f4;
+
+        }
+
+        .panel-grid-cell .widget-title {
+            margin-top: 0;
+            font-size: 22px;
+            color: #007A3D !important;
+            padding: 15px;
+            font-weight: bold !important;
+            text-align: center;
+
+        }
+
+        .rpwd-recent-post__title {
+            font-size: 20px;
+            font-weight: 400 !important;
+            font-family: Montserrat, Helvetica, Arial;
+        }
+
+        #logo img,
+        #logo-sticky img {
+            border: none;
+
+            max-width: 300px;
+
+            background: #fff;
+            padding: 10px;
+        }
+
+        #logo img {
+            max-height: 100px;
+            margin-bottom: -50px;
+        }
+
+        #header .menu>li.current_page_item>a {
+            color: #0076BF;
+        }
+
+        .themebutton,
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"] {
+            background: #007880;
+        }
+
+        .services-builder.style1 .iconurl a {
+            background: #007880;
+        }
+
+        #sub-footer-core .copyright,
+        #post-footer-social,
+        #sub-footer-core #footer-menu {
+            display: none;
+        }
+
+        #header-sticky .menu>li.current_page_item>a {
+            color: #0080bf;
+        }
+
+        #body-core {
+            background: #efefef;
+        }
+
+        body {
+            color: #000;
+        }
+
+        .services-builder.style1 {
+            background: #fff;
+        }
+
+        #introaction-core,
+        #outroaction-core,
+        .sc-action-core {
+            background: #fff;
+        }
+
+        .rpwd-recent-post-main.rpwd-design-1 .rpwd-recent-post__image {
+            padding: 5px;
+        }
+
+        .blog-article {
+            background: #fff;
+        }
+
+        .blog-style1 #content {
+            background: #fff;
+        }
+
+        #content {
+            background: #fff;
+        }
+
+        #intro {
+            background: url(/wp-content/uploads/2019/08/footer-bg.jpg);
+            background-attachment: fixed;
+
+        }
+
+        #intro .page-title {
+            color: #0076BF;
+            color: #007A3D !important;
+            font-size: 26px;
+        }
+
+        .grid-plus-inner .post-item.woocommerce.thumb-title-price .post-info {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+            width: 100%;
+            height: 100%;
+        }
+
+        .grid-plus-inner .grid-post-item.woocommerce.post-info-center {
+            background-color: rgba(0, 0, 0, 0.9) !important;
+        }
+
+        #content {
+            PADDING: 10PX 10PX 0px 10px;
+        }
+
+        #comments {
+            DISPLAY: NONE;
+        }
+
+        #header-core {
+            max-height: 100px;
+        }
+
+        #pre-header {
+            background: #0076BF;
+            background-color: #007A3D !important;
+        }
+
+        #pre-header .header-links li a {
+            color: #fff;
+        }
+
+        #footer {
+            background: #fff;
+
+        }
+
+        #footer-core,
+        #footer-core p {
+            color: #fff;
+        }
+
+        #footer-core h3 {
+            color: #0080bf;
+            color: #007A3D !important;
+            font-size: 20px
+        }
+
+        .grid-plus-inner .grid-post-item.woocommerce.thumb-title-price-inline .post-info {
+            position: absolute;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5) !important;
+            z-index: 2;
+            width: 100%;
+            text-align: center;
+        }
+
+        #sidebar h3.widget-title {
+            background: #0080bf;
+            background: #007A3D !important;
+            width: 90%;
+            padding: 10px;
+            text-align: left;
+
+
+            color: #fff;
+        }
+
+        #sidebar h3.widget-title:before {
+            border-bottom: 0px !important;
+        }
+
+        .sow-carousel-title {
+            text-align: left;
+            font-size: 25px;
+            color: #0080bf;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        #header .menu>li a {
+            text-transform: uppercase;
+        }
+
+        #content-core {
+            margin-top: 0px;
+        }
+
+        .sow-carousel-wrapper ul.sow-carousel-items li.sow-carousel-item h3 {
+
+            height: 70px;
+            color: #000;
+        }
+
+        #intro .page-title>span {
+            background-color: rgba(0, 0, 0, 0);
+
+        }
+
+        #header-search a {
+            background: #0076BF;
+            background: #007A3D !important;
+        }
+
+        .nav-previous a,
+        .nav-next a {
+            display: none;
+        }
+
+        .awac-wrapper {
+            border: 5px dotted #007A3D;
+            padding: 10px;
+            margin-left: 0%;
+            margin-right: 0%;
+        }
+
+        .single .entry-content {
+            margin-bottom: 30px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #0076BF;
+        }
+
+        .grid-plus-container .grid-post-item {
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+            border: 1px solid #eee;
+        }
+
+        .grid-plus-container .grid-post-item .excerpt {
+            padding: 0 5px 0 5px;
+        }
+
+        .grid-plus-container .grid-post-item .post-info .title {
+            padding: 0 5px 0 5px;
+        }
+
+        #slider .featured-title {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+        }
+
+        .layout-sidebar-right #sidebar-core {
+            margin-left: 50px;
+            border: 5px dotted #007A3D !important;
+            padding: 10px;
+
+        }
+
+        #sub-footer-widgets p {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        #sub-footer-widgets h3 {
+            font-size: 20px;
+            color: #fff;
+        }
+
+        #sub-footer a {
+            color: #fff;
+        }
+
+        #sub-footer .widget li>a:before {
+            color: #fff;
+        }
+
+        @media (max-width: 480px) {
+
+            #rpbt-related-gallery-1 .gallery-item {
+                width: 48% !important;
+                margin: 2px;
+                border: 1px solid #000;
+            }
+
+            #logo img {
+                max-height: 40px;
+                margin-bottom: 0px;
+            }
+
+            .pt-cv-view .pt-cv-ifield {
+                padding: 2px !important;
+            }
+        }
+
+        #rpbt-related-gallery-1 .gallery-item {
+            border: 1px solid #007A3D;
+            margin: 2px;
+        }
+
+        #footer-core a {
+            color: #007A3D;
+        }
+
+        .wp-caption .wp-caption-text,
+        .gallery-caption {
+            font-size: 14px;
+        }
+
+        #footer {
+            border-top: 0px;
+        }
+
+        #sub-footer {
+            background: #0076BF;
+            background-color: #007A3D !important;
+        }
+
+        .widget {
+            line-height: 1.5;
+        }
+
+        blockquote,
+        q {
+            background: #0076BF;
+        }
+
+        .layout-sidebar-right #main-core {
+            MARGIN-RIGHT: 0PX;
+        }
+
+        .pt-cv-wrapper .btn-success {
+            color: #fff;
+            background-color: #007A3D;
+            border-color: #007A3D;
+        }
+
+        .pt-cv-view .pt-cv-ifield {
+            border: 1px dotted #007A3D;
+            padding: 5px
+        }
+
+        .pt-cv-wrapper .col-xs-6 {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            #logo img {
+                float: left;
+                max-height: 100px;
+                margin-bottom: 0px;
+            }
+        }</style><link rel="stylesheet" id="animate-css" href="/wp-content/plugins/grid-plus/assets/lib/animate/animate.css" type="text/css" media="all"/><link rel="stylesheet" id="light-gallery-css" href="/wp-content/plugins/grid-plus/assets/lib/light-gallery/css/lightgallery.min.css" type="text/css" media="all"/><link rel="stylesheet" id="ladda-css" href="/wp-content/plugins/grid-plus/assets/lib/ladda/ladda.min.css" type="text/css" media="all"/><link rel="stylesheet" id="grid-plus-stack-css" href="/wp-content/plugins/grid-plus/assets/lib/grid-stack/gridstack.min.css" type="text/css" media="all"/><link rel="stylesheet" id="grid-plus-stack-extra-css" href="/wp-content/plugins/grid-plus/assets/lib/grid-stack/gridstack-extra.min.css" type="text/css" media="all"/><link rel="stylesheet" id="grid-owl-carousel-css" href="/wp-content/plugins/grid-plus/assets/lib/owl-carousel/grid.owl.carousel.min.css" type="text/css" media="all"/><link rel="stylesheet" id="grid-plus-fe-style-css" href="/wp-content/plugins/grid-plus/assets/css/fe_style.css" type="text/css" media="all"/></head><body class="home page-template-default page page-id-51 wp-custom-logo siteorigin-panels siteorigin-panels-before-js siteorigin-panels-home layout-sidebar-none layout-responsive slider-full header-style1 header-sticky scrollup-on"><div id="body-core" class="hfeed site"><div id="content"><div id="body-core" class="hfeed site"><header><div id="site-header"><div id="pre-header"><div class="wrap-safari"><div id="pre-header-core" class="main-navigation"><div id="pre-header-links-inner" class="header-links"><ul id="menu-main" class="menu"><li id="menu-item-639" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-639"><a href="/" aria-current="page">Home</a></li><li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="/gioi-thieu">Giới thiệu</a></li><li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="/kien-truc">KIến trúc</a></li><li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907"><a href="/noi-that">Nội thất</a></li><li id="menu-item-906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-906"><a href="/thi-cong-xay-dung">Thi công xây dựng</a></li><li id="menu-item-905" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-905"><a href="/xin-phep-xay-dung">Xin phép xây dựng</a></li><li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="/lien-he">Liên hệ</a></li></ul></div></div></div></div><div id="header"><div id="header-core"><div id="logo"><a href="/" class="custom-logo-link" rel="home"><img width="416" height="292" src="/img/logo1.png" style="border: 1px solid" class="custom-logo" alt="Nhà Xanh &#8211; Green Home" srcset="/img/logo1.png 416w, /img/logo1.png 300w" sizes="(max-width: 416px) 100vw, 416px"/></a></div><div id="header-links" class="main-navigation"><div id="header-links-inner" class="header-links"><ul id="menu-main-1" class="menu"><li id="menu-item-639" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/"><span>Home</span></a></li><li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/gioi-thieu"><span>Giới thiệu</span></a></li><li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/kien-truc"><span>KIến trúc</span></a></li><li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/noi-that"><span>Nội thất</span></a></li><li id="menu-item-906" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/thi-cong-xay-dung"><span>Thi công xây dựng</span></a></li><li id="menu-item-905" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/xin-phep-xay-dung"><span>Xin phép xây dựng</span></a></li><li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/lien-he"><span>Liên hệ</span></a></li></ul><div id="header-search"><a><div class="fa fa-search"></div></a><form method="get" class="searchform" action="/" role="search"><input type="text" class="search" name="s" placeholder="Search &hellip;"/> <input type="submit" class="searchsubmit" name="submit" value="Search"/></form></div></div></div><div id="header-nav"><a class="btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div></div></div><div id="header-responsive"><div id="header-responsive-inner" class="responsive-links nav-collapse collapse"><ul id="menu-main-2"><li id="res-menu-item-639" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/"><span>Home</span></a></li><li id="res-menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/gioi-thieu"><span>Giới thiệu</span></a></li><li id="res-menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/kien-truc"><span>KIến trúc</span></a></li><li id="res-menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/noi-that"><span>Nội thất</span></a></li><li id="res-menu-item-906" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/thi-cong-xay-dung"><span>Thi công xây dựng</span></a></li><li id="res-menu-item-905" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/xin-phep-xay-dung"><span>Xin phép xây dựng</span></a></li><li id="res-menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/lien-he"><span>Liên hệ</span></a></li></ul></div></div><div id="header-sticky"><div id="header-sticky-core"><div id="logo-sticky"><a href="/" class="custom-logo-link" rel="home"><img width="416" height="292" src="/img/logo1.png" class="custom-logo" alt="Nhà Xanh &#8211; Green Home" srcset="/img/logo1.png 300w" sizes="(max-width: 416px) 100vw, 416px"/></a></div><div id="header-sticky-links" class="main-navigation"><div id="header-sticky-links-inner" class="header-links"><ul id="menu-main-3" class="menu"><li id="menu-item-639" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/"><span>Home</span></a></li><li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/gioi-thieu"><span>Giới thiệu</span></a></li><li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/kien-truc"><span>KIến trúc</span></a></li><li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/noi-that"><span>Nội thất</span></a></li><li id="menu-item-906" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/thi-cong-xay-dung"><span>Thi công xây dựng</span></a></li><li id="menu-item-905" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/xin-phep-xay-dung"><span>Xin phép xây dựng</span></a></li><li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/lien-he"><span>Liên hệ</span></a></li></ul><div id="header-search"><a><div class="fa fa-search"></div></a><form method="get" class="searchform" action="/" role="search"><input type="text" class="search" name="s" placeholder="Search &hellip;"/> <input type="submit" class="searchsubmit" name="submit" value="Search"/></form></div></div></div><div class="clearboth"></div></div></div><div id="intro" class="option1"><div class="wrap-safari"><div id="intro-core"><h1 class="page-title"><span>Thi công xây dựng</span></h1></div></div></div></div></header><div id="content"><div id="content-core"><div id="main"><div id="main-core"><article id="post-312" class="post-312 page type-page status-publish has-post-thumbnail hentry"><div class="wp-block-columns has-2-columns"><div class="wp-block-column"><figure class="wp-block-image"><img class="wp-image-313" src="https://hoanganh.online/wp-content/uploads/2019/05/thi-cong-xay-dung.jpg" alt="" srcset="https://thietkenhadep.site/wp-content/uploads/2019/05/thi-cong-xay-dung.jpg 1024w, https://thietkenhadep.site/wp-content/uploads/2019/05/thi-cong-xay-dung-300x246.jpg 300w, https://thietkenhadep.site/wp-content/uploads/2019/05/thi-cong-xay-dung-768x629.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px"></figure><p class="has-background has-very-light-gray-background-color"><strong>QUYỀN LỢI DÀNH CHO CHỦ NHÀ:</strong></p><p class="has-background has-very-light-gray-background-color">Miễn phí thiết kế;</p><p class="has-background has-very-light-gray-background-color">Miễn phí giấy phép xây dựng;</p><p class="has-background has-very-light-gray-background-color">Bảo hành 5 năm;</p></div><div class="wp-block-column"><p><strong>Bên cạnh những thiết kế đẹp mắt, giai đoạn&nbsp;thi công xây dựng&nbsp;chính là yếu tố quan trọng nhất để hoàn thành một ngôi nhà hoàn chỉnh. Bởi thiết kế có đẹp đến đâu mà thi công không đúng kỹ thuật, kết cấu lõng lẽo thì ngôi nhà sẽ không được trọn vẹn và khó bền đẹp với thời gian.</strong></p><p><strong>DỊCH VỤ THI CÔNG XÂY DỰNG CỦA CHÚNG TÔI:</strong></p><ul><li>Cam kết chất lượng công trình là tiêu chí hàng đầu tạo sự tin tưởng của khách hàng hơn 8 năm qua.</li><li>Giá thành cạnh tranh, hợp lý với mặt bằng chung của thị trường và đáp ứng được mong muốn của gia chủ.</li><li>Tiến độ thi công nhanh chóng, cam kết đúng hẹn tuyệt đối, phạt tiến độ nếu công trình chậm trễ (điều khoản được quy định rõ trong hợp đồng).</li><li>Cam kết bảo hành nhanh chóng, khắc phục sự cố kịp thời không gây ảnh hướng đến nhu cầu sinh hoạt của gia đình.</li><li>Cam kết không bán thầu, chịu trách nhiệm tuyệt đối và đồng hành cùng với khách hàng trong suốt quá trình sử dụng.</li><li>Không sử dụng vật tư kém chất lượng, chúng tôi luôn cam kết vật tư đúng và đủ để bảo đảm chất lượng công trình &nbsp;sau khi đưa vào sử dụng.</li><li>Tư vấn, khắc phục, chỉnh sữa lỗi nếu bản vẽ thiết kế ảnh hưởng không tốt đến quá trình thi công và chất lượng công trình (đối với trường hợp chủ nhà nhờ bên thứ 3 thiết kế).</li></ul></div></div><div class="awac-wrapper"><div class="awac widget sow-editor-2"><div class="so-widget-sow-editor so-widget-sow-editor-base"><div class="siteorigin-widget-tinymce textwidget"><p style="text-align: center"><span style="color: #ff0000"><strong>LIÊN HỆ TƯ VẤN 24/7</strong></span></p><p style="text-align: center"><strong>Hotline: <span style="color: #ff0000">0938 116 228 - Mr Hoàng Anh - CEO</span></strong><br><span style="color: #05669e">Website: <a href="https://thietkenhadep.site">https://thietkenhadep.site</a></span></p></div></div></div></div></article></div></div><div id="sidebar"><div id="sidebar-core"><aside class="widget widget_recent_entries"><h3 class="widget-title"><i class="fa fa-home" aria-hidden="true"></i> Bạn cần biết</h3><ul></ul></aside><aside class="widget widget_search"><form method="get" class="searchform" action="/" role="search"><input type="text" class="search" name="s" placeholder="Search …"> <input type="submit" class="searchsubmit" name="submit" value="Search"></form></aside></div></div></div></div><footer><div id="footer"><div id="footer-core" class="option1"><div id="footer-col1" class="widget-area"></div></div></div><div id="sub-footer"><div id="sub-footer-widgets" class="option4"><div id="sub-footer-col1" class="widget-area"><aside class="widget widget_text"><h3 class="sub-footer-widget-title"><span>LIÊN HỆ CÔNG TY THIẾT KẾ - XÂY DỰNG</span></h3><div class="textwidget"><p><i class="fa fa-home" aria-hidden="true"></i> Địa chỉ 1: 417/49/115 Quang Trung, phường 10, quận Gò vấp, TPHCM</p><p><i class="fa fa-home" aria-hidden="true"></i> : Số 06 đường số 9, khu dân cư Sông Đà, khu phố 6, phường Hiệp Bình Chánh, quận Thủ Đức, TP.HCM</p><p><i class="fa fa-phone-square" aria-hidden="true"></i> Điện thoại: 0938 116 228</p><p><i class="fa fa-envelope" aria-hidden="true"></i> Email: thanhphatxd5@gmail.com</p><p>Website: <a href="#">www.thanhphatxd5.com</a></p></div></aside></div><div id="sub-footer-col2" class="widget-area"><aside class="widget widget_nav_menu"><h3 class="sub-footer-widget-title"><span>MENU</span></h3><div class="menu-main-container"><ul id="menu-main-4" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-639"><a href="/" aria-current="page">Home</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="/gioi-thieu/">Giới thiệu</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="/thiet-ke/">KIến trúc</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907"><a href="/thiet-ke-va-thi-cong-noi-that/">Nội thất</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-906"><a href="/thi-cong-xay-dung/">Thi công xây dựng</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-905"><a href="/dich-vu-xin-phep-xay-dung/">Xin phép xây dựng</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="/lien-he/">Liên hệ</a></li></ul></div></aside></div></div><div id="sub-footer-core"><div class="copyright">Developed by <a href="https://shuttlethemes.com/" target="_blank">Shuttle Themes</a>. Powered by <a href="https://www.wordpress.org/" target="_blank">WordPress</a>.</div></div></div></footer></div></div><script type="text/javascript">/* <![CDATA[ */
+        var PT_CV_PUBLIC = {
+            "_prefix": "pt-cv-",
+            "page_to_show": "5",
+            "_nonce": "07cbcc2850",
+            "is_admin": "",
+            "is_mobile": "",
+            "ajaxurl": "https:\/\/thietkenhadep.site\/wp-admin\/admin-ajax.php",
+            "lang": "",
+            "loading_image_src": "data:image\/gif;base64,R0lGODlhDwAPALMPAMrKygwMDJOTkz09PZWVla+vr3p6euTk5M7OzuXl5TMzMwAAAJmZmWZmZszMzP\/\/\/yH\/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgAPACwAAAAADwAPAAAEQvDJaZaZOIcV8iQK8VRX4iTYoAwZ4iCYoAjZ4RxejhVNoT+mRGP4cyF4Pp0N98sBGIBMEMOotl6YZ3S61Bmbkm4mAgAh+QQFCgAPACwAAAAADQANAAAENPDJSRSZeA418itN8QiK8BiLITVsFiyBBIoYqnoewAD4xPw9iY4XLGYSjkQR4UAUD45DLwIAIfkEBQoADwAsAAAAAA8ACQAABC\/wyVlamTi3nSdgwFNdhEJgTJoNyoB9ISYoQmdjiZPcj7EYCAeCF1gEDo4Dz2eIAAAh+QQFCgAPACwCAAAADQANAAAEM\/DJBxiYeLKdX3IJZT1FU0iIg2RNKx3OkZVnZ98ToRD4MyiDnkAh6BkNC0MvsAj0kMpHBAAh+QQFCgAPACwGAAAACQAPAAAEMDC59KpFDll73HkAA2wVY5KgiK5b0RRoI6MuzG6EQqCDMlSGheEhUAgqgUUAFRySIgAh+QQFCgAPACwCAAIADQANAAAEM\/DJKZNLND\/kkKaHc3xk+QAMYDKsiaqmZCxGVjSFFCxB1vwy2oOgIDxuucxAMTAJFAJNBAAh+QQFCgAPACwAAAYADwAJAAAEMNAs86q1yaWwwv2Ig0jUZx3OYa4XoRAfwADXoAwfo1+CIjyFRuEho60aSNYlOPxEAAAh+QQFCgAPACwAAAIADQANAAAENPA9s4y8+IUVcqaWJ4qEQozSoAzoIyhCK2NFU2SJk0hNnyEOhKR2AzAAj4Pj4GE4W0bkJQIAOw=="
+        };
+        var PT_CV_PAGINATION = {
+            "first": "\u00ab",
+            "prev": "\u2039",
+            "next": "\u203a",
+            "last": "\u00bb",
+            "goto_first": "Go to first page",
+            "goto_prev": "Go to previous page",
+            "goto_next": "Go to next page",
+            "goto_last": "Go to last page",
+            "current_page": "Current page is",
+            "goto_page": "Go to page"
+        };
+        /* ]]> */</script><script type="text/javascript" src="/wp-content/plugins/content-views-query-and-display-post-page/public/assets/js/cv.js"></script><script type="text/javascript" src="/wp-content/plugins/so-widgets-bundle/widgets/post-carousel/js/carousel.min.js"></script><script type="text/javascript" src="/wp-includes/js/imagesloaded.min.js"></script><script type="text/javascript" src="/wp-content/themes/shuttle/lib/extentions/prettyPhoto/js/jquery.prettyPhoto.js"></script><script type="text/javascript" src="/wp-content/themes/shuttle/lib/scripts/modernizr.js"></script><script type="text/javascript" src="/wp-content/themes/shuttle/lib/scripts/plugins/waypoints/waypoints.min.js"></script><script type="text/javascript" src="/wp-content/themes/shuttle/lib/scripts/plugins/waypoints/waypoints-sticky.min.js"></script><script type="text/javascript" src="/wp-content/themes/shuttle/lib/scripts/plugins/scrollup/jquery.scrollUp.min.js"></script><script type="text/javascript" src="/wp-content/themes/shuttle/lib/extentions/bootstrap/js/bootstrap.js"></script><script type="text/javascript" src="/wp-content/themes/shuttle/lib/scripts/main-frontend.js"></script><script type="text/javascript" src="/wp-content/themes/shuttle/lib/scripts/plugins/ResponsiveSlides/responsiveslides.min.js"></script><script type="text/javascript" src="/wp-content/themes/shuttle/lib/scripts/plugins/ResponsiveSlides/responsiveslides-call.js"></script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js"></script><script type="text/javascript" src="/wp-content/plugins/grid-plus/assets/lib/light-gallery/js/lightgallery-all.min.js"></script><script type="text/javascript" src="/wp-content/plugins/grid-plus/assets/lib/ladda/spin.min.js"></script><script type="text/javascript" src="/wp-content/plugins/grid-plus/assets/lib/ladda/ladda.min.js"></script><script type="text/javascript" src="/wp-content/plugins/grid-plus/assets/lib/grid-stack/jquery-ui.js"></script><script type="text/javascript" src="/wp-includes/js/underscore.min.js"></script><script type="text/javascript" src="/wp-content/plugins/grid-plus/assets/lib/grid-stack/gridstack.min.js"></script><script type="text/javascript" src="/wp-content/plugins/grid-plus/assets/lib/grid-stack/gridstack.jQueryUI.min.js"></script><script type="text/javascript" src="/wp-content/plugins/grid-plus/assets/lib/owl-carousel/grid.owl.carousel.min.js"></script><script type="text/javascript" src="/wp-content/plugins/grid-plus/assets/lib/matchmedia/matchmedia.js"></script><script type="text/javascript">/* <![CDATA[ */
+        var _wpUtilSettings = {
+            "ajax": {
+                "url": "\/wp-admin\/admin-ajax.php"
+            }
+        };
+        /* ]]> */</script><script type="text/javascript" src="/wp-includes/js/wp-util.min.js"></script><script type="text/javascript" src="/wp-content/plugins/grid-plus/assets/js/frontend/grid.min.js"></script><div id="grid-plus-custom-css"><style type="text/css">.grid-5d7a611a5b194 .grid-plus-inner .grid-post-item .title,
+            .grid-5d7a611a5b194 .grid-plus-inner .grid-post-item .title a {
+                color: #ffffff !important;
+            }</style></div><script type="text/javascript">document.body.className = document.body.className.replace("siteorigin-panels-before-js", "");</script></div></body></html>
